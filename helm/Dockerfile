@@ -9,5 +9,5 @@ RUN wget --no-check-certificate -O helm.tar.gz https://get.helm.sh/helm-v$VERSIO
 RUN tar -zxvf helm.tar.gz --strip-components=1
 RUN ls -al
 
-FROM alpine:latest
+FROM ubuntu:noble
 COPY --from=builder /workspace/helm /usr/local/bin/helm
