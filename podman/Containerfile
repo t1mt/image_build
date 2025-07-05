@@ -61,7 +61,7 @@ RUN dnf -y makecache && \
     esac && \
     dnf clean all && \
     rm -rf /var/cache /var/log/dnf* /var/log/yum.* && \
-    ln -sf "$(which podman)" /usr/local/bin/docker
+    ln -sf /usr/bin/podman /usr/bin/docker
 
 # It's assumed `podman` will end up with UID/GID 1000
 RUN useradd podman && \
