@@ -1,1 +1,1 @@
-# image_build
+# Github Action for building images
